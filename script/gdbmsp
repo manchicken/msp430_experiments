@@ -1,3 +1,2 @@
 #!/bin/bash
-mspdebug rf2500 gdb > /dev/null 2>&1 &
 msp430-gdb -ex 'target remote :2000' -ex 'monitor reset' -ex "load \"$1\"" "$1"
