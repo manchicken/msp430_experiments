@@ -8,7 +8,7 @@ MSP430 Programs
 ## toggle_leds_with_button.430 ##
 This program toggles P1.0 and P1.6 with each push of P1.3.
 
-## light_patterns.c ##
+## light_patterns.430 ##
 The goal of this is to learn how to use the timer and make patterns of P1.0 and P1.6 appear.
 
 Other Stuff
