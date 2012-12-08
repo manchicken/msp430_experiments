@@ -1,46 +1,29 @@
 #include <msp430.h>
 
 #define LED0 BIT0
+#define REDLED LED0
 #define LED1 BIT6 
+#define GREENLED LED1
 #define BUTTON BIT3
 
-#define TIMER_OFFSET 64000
+#define CRYSTAL_KHz 32768
 
-int main(void)
-{
-	WDTCTL = WDTPW + WDTHOLD;
-	// P1DIR &= ~BUTTON;
-	P1DIR = (LED1|LED0);
-	P1OUT = BUTTON|LED1;
-	P1REN |= BUTTON;
-	P1IE |= BUTTON;
-	P1IES |= BUTTON;
-	P1IFG &= ~BUTTON;
+void main(void) {
+	WDTCTL = WDTPW + WDTHOLD; 			// Stop watchdog timer
+	P1DIR |= (REDLED | GREENLED); 					// Set P1.0 and P1.6 to output direction
+	P1OUT &= REDLED; 					// Set the red LED on
+	P1OUT |= GREENLED; 					// Set the green LED off
 
-	CCTL0 |= CCIE;
-	CCR0 = TIMER_OFFSET;
-	TACTL = TASSEL_2 + MC_2 + TAIFG + TAIE;
+	CCR0 = CRYSTAL_KHz-1;					// Count limit
+	CCTL0 = 0x10;					// Enable counter interrupts, bit 4=1
+	TACTL = TASSEL_1 + MC_1; 			// Timer A with ACLK, count UP
 
-	__enable_interrupt();
+	_BIS_SR(LPM0_bits + GIE);       		           // LPM0 (low power mode) with interrupts enabled
 
-	while (1) {}
+	return 0;
 }
 
 __attribute__((interrupt(TIMER0_A0_VECTOR)))
-void timera_interrupt(void) {
-	// P1OUT ^= LED1;
-	P1OUT ^= (LED0 + LED1);
-	CCR0 = TIMER_OFFSET;
-}
-
-__attribute__((interrupt(PORT1_VECTOR)))
-void port1_interrupt(void)
-{
-	if (P1IN & BUTTON) {
-		P1OUT ^= (LED0 + LED1);
-	}
-	// P1OUT &= ~BUTTON;
-
-	P1IFG &= ~BUTTON;
-	P1IES ^= BUTTON;
-}
+void Timer0_A0 (void) { // Timer0 A0 interrupt service routine
+	P1OUT ^= (REDLED + GREENLED);					// Toggle red/green LEDs
+}	
