@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"TA1",
+				"TA1CCTL1"
+			],
+			[
+				"O",
+				"OFFSET2_TIMER"
+			],
+			[
+				"PWM",
+				"PWM_DUTY"
+			],
+			[
+				"TIMER",
+				"TIMER_OFFSET"
+			],
+			[
 				"bit",
 				"bitchars"
 			],
@@ -400,43 +416,10 @@
 	"buffers":
 	[
 		{
-			"file": "/Users/manchicken/Documents/HardwareDev/msp430_experiments/src/bitmath.c",
+			"file": "/Users/manchicken/Documents/HardwareDev/msp430_experiments/src/light_patterns.c",
 			"settings":
 			{
-				"buffer_size": 1152,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/manchicken/Documents/HardwareDev/msp430_experiments/src/toggle_leds_with_button.c",
-			"settings":
-			{
-				"buffer_size": 486,
-				"line_ending": "Unix",
-				"name": "#include <msp430.h>"
-			}
-		},
-		{
-			"file": "/Users/manchicken/Documents/HardwareDev/msp430_experiments/Makefile",
-			"settings":
-			{
-				"buffer_size": 592,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/manchicken/Documents/HardwareDev/msp430_experiments/script/gdbmsp",
-			"settings":
-			{
-				"buffer_size": 131,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/manchicken/Documents/HardwareDev/msp430_experiments/README.md",
-			"settings":
-			{
-				"buffer_size": 239,
+				"buffer_size": 833,
 				"line_ending": "Unix"
 			}
 		}
@@ -444,9 +427,13 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 107.0,
+		"height": 67.0,
 		"selected_items":
 		[
+			[
+				"close",
+				"Project: Close"
+			],
 			[
 				"inden",
 				"Indentation: Reindent Lines"
@@ -457,10 +444,6 @@
 			],
 			[
 				"p",
-				"Project: Close"
-			],
-			[
-				"close",
 				"Project: Close"
 			],
 			[
@@ -553,6 +536,15 @@
 	},
 	"file_history":
 	[
+		"/Users/manchicken/Documents/Devel/manchicken.dev.urpartments.com/README.md",
+		"/Users/manchicken/Documents/Devel/manchicken.dev.urpartments.com/public_html/README.md",
+		"/Users/manchicken/Documents/HardwareDev/msp430_experiments/README.md",
+		"/Users/manchicken/Documents/HardwareDev/msp430_experiments/script/gdbmsp",
+		"/Users/manchicken/Documents/HardwareDev/msp430_experiments/Makefile",
+		"/Users/manchicken/Documents/HardwareDev/MSP430G2xx3 Code Examples/C/msp430g2xx3_ta_01.c",
+		"/Users/manchicken/Documents/HardwareDev/msp430_experiments/src/toggle_leds_with_button.c",
+		"/Users/manchicken/Documents/HardwareDev/msp430_experiments/src/bitmath.c",
+		"/Users/manchicken/Documents/HardwareDev/msp430_experiments/src/light_patterns.c",
 		"/Users/manchicken/Documents/HardwareDev/demo-breathing-led-gcc-4.5.3/breathing-led.c",
 		"/Users/manchicken/Documents/HardwareDev/src/bitmath.c",
 		"/Users/manchicken/Documents/HardwareDev/Makefile",
@@ -671,16 +663,7 @@
 		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/335DFD9C-15C4-413E-916C-6CA1A5EBDB45/index.ctp",
 		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/03A6BA02-E71B-4650-BD60-9EFDBDB320E6/index.ctp",
 		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/83AFCCF4-700B-4830-9C9D-A8B8D1431078/home.ctp",
-		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/8403783E-20A5-4F00-8172-B0C6F2D91A38/PropertyInfo.php",
-		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/7EA96B55-D1D3-439B-83D3-FDF742058A91/home.ctp",
-		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/13094A4D-C293-4575-B1F7-8D649256D011/header.php",
-		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/980D4B7D-34B7-4BAD-8647-B05026F84FDD/default.ctp",
-		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/BF920F47-9B4D-4484-9289-5FB325008A8D/index.ctp",
-		"/Volumes/cpm-apts.com (Dev)/app/views/properties/view.ctp",
-		"/Volumes/cpm-apts.com (Dev)/app/views/helpers/qrcode.php",
-		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/8FFCA1F9-9641-4A21-A815-5A2037B2F093/admin_index.ctp",
-		"/Volumes/cpm-apts.com (Dev)/app/views/properties/admin_view.ctp",
-		"/Volumes/cpm-apts.com (Dev)/app/views/properties/index.ctp"
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/8403783E-20A5-4F00-8172-B0C6F2D91A38/PropertyInfo.php"
 	],
 	"find":
 	{
@@ -793,134 +776,29 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/Users/manchicken/Documents/HardwareDev/msp430_experiments/src/bitmath.c",
+					"file": "/Users/manchicken/Documents/HardwareDev/msp430_experiments/src/light_patterns.c",
 					"settings":
 					{
-						"buffer_size": 1152,
+						"buffer_size": 833,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								276,
-								276
+								308,
+								308
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/C++/C.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 33.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/Users/manchicken/Documents/HardwareDev/msp430_experiments/src/toggle_leds_with_button.c",
-					"settings":
-					{
-						"buffer_size": 486,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								486
-							]
-						],
-						"settings":
-						{
-							"auto_name": "#include <msp430.h>",
 							"syntax": "Packages/C++/C.tmLanguage",
 							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/Users/manchicken/Documents/HardwareDev/msp430_experiments/Makefile",
-					"settings":
-					{
-						"buffer_size": 592,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								272,
-								272
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Makefile/Makefile.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/Users/manchicken/Documents/HardwareDev/msp430_experiments/script/gdbmsp",
-					"settings":
-					{
-						"buffer_size": 131,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								49,
-								49
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/Users/manchicken/Documents/HardwareDev/msp430_experiments/README.md",
-					"settings":
-					{
-						"buffer_size": 239,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								239,
-								239
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

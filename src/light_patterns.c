@@ -6,15 +6,16 @@
 #define GREENLED LED1
 #define BUTTON BIT3
 
-#define CRYSTAL_KHz 32768
+#define CRYSTAL_kHz 32768
 
-void main(void) {
+int main(void) {
 	WDTCTL = WDTPW + WDTHOLD; 			// Stop watchdog timer
 	P1DIR |= (REDLED | GREENLED); 					// Set P1.0 and P1.6 to output direction
-	P1OUT &= REDLED; 					// Set the red LED on
-	P1OUT |= GREENLED; 					// Set the green LED off
+	// P1OUT = 0;
+	P1OUT = REDLED; 					// Set the red LED on
+	// P1OUT |= GREENLED; 					// Set the green LED off
 
-	CCR0 = CRYSTAL_KHz-1;					// Count limit
+	CCR0 = CRYSTAL_kHz-1;					// Count limit
 	CCTL0 = 0x10;					// Enable counter interrupts, bit 4=1
 	TACTL = TASSEL_1 + MC_1; 			// Timer A with ACLK, count UP
 

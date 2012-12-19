@@ -11,6 +11,9 @@ This program toggles P1.0 and P1.6 with each push of P1.3.
 ## light_patterns.430 ##
 The goal of this is to learn how to use the timer and make patterns of P1.0 and P1.6 appear.
 
+## readout_demo.430 ##
+The goal of this is to use the timer and the LEDs to give a readout.
+
 Other Stuff
 ===========
 ## bitmath.osx ##

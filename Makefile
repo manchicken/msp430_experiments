@@ -14,6 +14,7 @@ CFLAGS = -g -Os -I$(INCDIR) -Wall -I$(MSPINC)
 PROGS = \
 	$(BINDIR)/toggle_leds_with_button.430 \
 	$(BINDIR)/light_patterns.430 \
+	$(BINDIR)/readout_demo.430 \
 
 PLAY = \
 	$(BINDIR)/bitmath.osx \
