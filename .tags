@@ -1,0 +1,55 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BINDIR	Makefile	/^BINDIR = .\/bin$/;"	m
+BUTTON	include/manchicken_430.h	/^#define BUTTON /;"	d
+BUTTON	src/bitmath.c	/^#define BUTTON /;"	d	file:
+BUTTON	src/light_patterns.c	/^#define BUTTON /;"	d	file:
+BUTTON	src/toggle_leds_with_button.c	/^#define BUTTON /;"	d	file:
+CFLAGS	Makefile	/^CFLAGS = -g -Os -I$(INCDIR) -Wall -I$(MSPINC)$/;"	m
+CRYSTAL_kHz	include/manchicken_430.h	/^#define CRYSTAL_kHz /;"	d
+CRYSTAL_kHz	src/light_patterns.c	/^#define CRYSTAL_kHz /;"	d	file:
+GCC	Makefile	/^GCC = msp430-gcc -mmcu=msp430g2553$/;"	m
+GREENLED	include/manchicken_430.h	/^#define GREENLED /;"	d
+GREENLED	src/light_patterns.c	/^#define GREENLED /;"	d	file:
+INCDIR	Makefile	/^INCDIR = .\/include$/;"	m
+LED0	src/bitmath.c	/^#define LED0 /;"	d	file:
+LED0	src/light_patterns.c	/^#define LED0 /;"	d	file:
+LED0	src/toggle_leds_with_button.c	/^#define LED0 /;"	d	file:
+LED1	src/bitmath.c	/^#define LED1 /;"	d	file:
+LED1	src/light_patterns.c	/^#define LED1 /;"	d	file:
+LED1	src/toggle_leds_with_button.c	/^#define LED1 /;"	d	file:
+LIBDIR	Makefile	/^LIBDIR = .\/lib$/;"	m
+MANCHICKEN_430	src/readout_demo.c	/^#define MANCHICKEN_430$/;"	d	file:
+MSPINC	Makefile	/^MSPINC = \/usr\/local\/msp430-toolchain\/msp430\/include$/;"	m
+OBJDIR	Makefile	/^OBJDIR = .\/obj$/;"	m
+OSXCC	Makefile	/^OSXCC = gcc$/;"	m
+PLAY	Makefile	/^PLAY = \\$/;"	m
+PROGS	Makefile	/^PROGS = \\$/;"	m
+READOUT_PADDING	include/manchicken_430.h	/^#define READOUT_PADDING /;"	d
+REDLED	include/manchicken_430.h	/^#define REDLED /;"	d
+REDLED	src/light_patterns.c	/^#define REDLED /;"	d	file:
+SRCDIR	Makefile	/^SRCDIR = .\/src$/;"	m
+TEST	src/bitmath.c	/^#define TEST(/;"	d	file:
+Timer0_A0	src/light_patterns.c	/^void Timer0_A0 (void) { \/\/ Timer0 A0 interrupt service routine$/;"	f
+Timer0_A0	src/readout_demo.c	/^void Timer0_A0 (void) {$/;"	f
+__MANCHICKEN_430_H__	include/manchicken_430.h	/^#define __MANCHICKEN_430_H__$/;"	d
+binout	src/bitmath.c	/^void binout(byte num){$/;"	f
+byte	include/manchicken_430.h	/^typedef char byte;$/;"	t
+byte	src/bitmath.c	/^typedef unsigned char byte;$/;"	t	file:
+foo	src/manchicken_430.c	/^char *foo = "manchicken_430.c";$/;"	v
+getbit	src/bitmath.c	/^byte getbit(unsigned short which) {$/;"	f
+main	src/bitmath.c	/^int main(void) {$/;"	f
+main	src/light_patterns.c	/^int main(void) {$/;"	f
+main	src/readout_demo.c	/^int main(void) {$/;"	f
+main	src/toggle_leds_with_button.c	/^int main(void)$/;"	f
+manckn430_display_next	src/manchicken_430.c	/^void manckn430_display_next() {$/;"	f
+manckn430_readout_timer_interrupt	src/manchicken_430.c	/^void manckn430_readout_timer_interrupt (void) {$/;"	f
+manckn430_set_display	src/manchicken_430.c	/^void manckn430_set_display(int new_value) {$/;"	f
+onoff	src/manchicken_430.c	/^byte onoff = 0;$/;"	v
+port1_interrupt	src/toggle_leds_with_button.c	/^void port1_interrupt(void)$/;"	f
+readout_reset	src/manchicken_430.c	/^byte readout_reset = 0;$/;"	v
+to_read_out	src/manchicken_430.c	/^int to_read_out = 0;$/;"	v

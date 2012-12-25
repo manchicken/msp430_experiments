@@ -19,9 +19,12 @@ PROGS = \
 PLAY = \
 	$(BINDIR)/bitmath.osx \
 
-.PHONY: all clean rebuild
+.PHONY: all clean rebuild tags
 
-all: $(PROGS) $(PLAY)
+all: tags $(OBJDIR)/manchicken_430.o $(PROGS) $(PLAY)
+
+tags:
+	ctags -R -f .tags
 
 clean:
 	rm -fr bin/* obj/*
@@ -29,7 +32,7 @@ clean:
 rebuild: clean all
 
 $(BINDIR)/%.430: $(SRCDIR)/%.c
-	$(GCC) $(CFLAGS) -o $@ $<
+	$(GCC) $(CFLAGS) $< $(OBJDIR)/manchicken_430.o -o $@
 
 $(BINDIR)/%.osx: $(SRCDIR)/%.c
 	$(OSXCC) $(CFLAGS) -o $@ $<
