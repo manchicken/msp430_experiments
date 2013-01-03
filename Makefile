@@ -9,12 +9,13 @@ MSPINC = /usr/local/msp430-toolchain/msp430/include
 GCC = msp430-gcc -mmcu=msp430g2553
 OSXCC = gcc
 
-CFLAGS = -g -Os -I$(INCDIR) -Wall -I$(MSPINC)
+CFLAGS = -g -Os -I$(INCDIR) -Wall -lc -I$(MSPINC)
 
 PROGS = \
 	$(BINDIR)/toggle_leds_with_button.430 \
 	$(BINDIR)/light_patterns.430 \
 	$(BINDIR)/readout_demo.430 \
+	$(BINDIR)/temp_readout_demo.430 \
 
 PLAY = \
 	$(BINDIR)/bitmath.osx \

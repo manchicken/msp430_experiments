@@ -9,7 +9,7 @@ BUTTON	include/manchicken_430.h	/^#define BUTTON /;"	d
 BUTTON	src/bitmath.c	/^#define BUTTON /;"	d	file:
 BUTTON	src/light_patterns.c	/^#define BUTTON /;"	d	file:
 BUTTON	src/toggle_leds_with_button.c	/^#define BUTTON /;"	d	file:
-CFLAGS	Makefile	/^CFLAGS = -g -Os -I$(INCDIR) -Wall -I$(MSPINC)$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -g -Os -I$(INCDIR) -Wall -lc -I$(MSPINC)$/;"	m
 CRYSTAL_kHz	include/manchicken_430.h	/^#define CRYSTAL_kHz /;"	d
 CRYSTAL_kHz	src/light_patterns.c	/^#define CRYSTAL_kHz /;"	d	file:
 GCC	Makefile	/^GCC = msp430-gcc -mmcu=msp430g2553$/;"	m
@@ -23,8 +23,8 @@ LED1	src/bitmath.c	/^#define LED1 /;"	d	file:
 LED1	src/light_patterns.c	/^#define LED1 /;"	d	file:
 LED1	src/toggle_leds_with_button.c	/^#define LED1 /;"	d	file:
 LIBDIR	Makefile	/^LIBDIR = .\/lib$/;"	m
-MANCHICKEN_430	src/readout_demo.c	/^#define MANCHICKEN_430$/;"	d	file:
 MSPINC	Makefile	/^MSPINC = \/usr\/local\/msp430-toolchain\/msp430\/include$/;"	m
+NO	include/manchicken_430.h	/^#define NO /;"	d
 OBJDIR	Makefile	/^OBJDIR = .\/obj$/;"	m
 OSXCC	Makefile	/^OSXCC = gcc$/;"	m
 PLAY	Makefile	/^PLAY = \\$/;"	m
@@ -35,21 +35,35 @@ REDLED	src/light_patterns.c	/^#define REDLED /;"	d	file:
 SRCDIR	Makefile	/^SRCDIR = .\/src$/;"	m
 TEST	src/bitmath.c	/^#define TEST(/;"	d	file:
 Timer0_A0	src/light_patterns.c	/^void Timer0_A0 (void) { \/\/ Timer0 A0 interrupt service routine$/;"	f
-Timer0_A0	src/readout_demo.c	/^void Timer0_A0 (void) {$/;"	f
+Timer0_A0	src/temp_readout_demo.c	/^void Timer0_A0 (void) {$/;"	f
+YES	include/manchicken_430.h	/^#define YES /;"	d
 __MANCHICKEN_430_H__	include/manchicken_430.h	/^#define __MANCHICKEN_430_H__$/;"	d
+__lock_readout_interrupt_handler	src/manchicken_430.c	/^byte __lock_readout_interrupt_handler = NO;$/;"	v
+_manckn430_display_next	src/manchicken_430.c	/^void _manckn430_display_next() {$/;"	f
+_manckn430_lock_readout	src/manchicken_430.c	/^void _manckn430_lock_readout(byte is_on) {$/;"	f
+_pause_display	src/manchicken_430.c	/^byte _pause_display = NO;$/;"	v
 binout	src/bitmath.c	/^void binout(byte num){$/;"	f
 byte	include/manchicken_430.h	/^typedef char byte;$/;"	t
 byte	src/bitmath.c	/^typedef unsigned char byte;$/;"	t	file:
-foo	src/manchicken_430.c	/^char *foo = "manchicken_430.c";$/;"	v
 getbit	src/bitmath.c	/^byte getbit(unsigned short which) {$/;"	f
+interrupt_timer0_a0	src/readout_demo.c	/^void interrupt_timer0_a0 (void) {$/;"	f
 main	src/bitmath.c	/^int main(void) {$/;"	f
 main	src/light_patterns.c	/^int main(void) {$/;"	f
 main	src/readout_demo.c	/^int main(void) {$/;"	f
+main	src/temp_readout_demo.c	/^int main(void) {$/;"	f
 main	src/toggle_leds_with_button.c	/^int main(void)$/;"	f
-manckn430_display_next	src/manchicken_430.c	/^void manckn430_display_next() {$/;"	f
+manckn430_enable_button_interrupt	src/manchicken_430.c	/^void manckn430_enable_button_interrupt (void) {$/;"	f
+manckn430_increment_display	src/manchicken_430.c	/^void manckn430_increment_display(int amount) {$/;"	f
+manckn430_is_button_down	src/manchicken_430.c	/^byte manckn430_is_button_down(void) {$/;"	f
+manckn430_pause_display	src/manchicken_430.c	/^void manckn430_pause_display() {$/;"	f
 manckn430_readout_timer_interrupt	src/manchicken_430.c	/^void manckn430_readout_timer_interrupt (void) {$/;"	f
+manckn430_resume_display	src/manchicken_430.c	/^void manckn430_resume_display() {$/;"	f
+manckn430_set_crystal_timer0_a0	src/manchicken_430.c	/^void manckn430_set_crystal_timer0_a0(void) {$/;"	f
 manckn430_set_display	src/manchicken_430.c	/^void manckn430_set_display(int new_value) {$/;"	f
-onoff	src/manchicken_430.c	/^byte onoff = 0;$/;"	v
+manckn430_toggle_led	src/manchicken_430.c	/^void manckn430_toggle_led(byte is_on, byte which_led) {$/;"	f
+onoff	src/manchicken_430.c	/^byte onoff = NO;$/;"	v
+port1_interrupt	src/readout_demo.c	/^void port1_interrupt(void) {$/;"	f
 port1_interrupt	src/toggle_leds_with_button.c	/^void port1_interrupt(void)$/;"	f
-readout_reset	src/manchicken_430.c	/^byte readout_reset = 0;$/;"	v
+reading_out	src/manchicken_430.c	/^int reading_out = 0;$/;"	v
+readout_reset	src/manchicken_430.c	/^byte readout_reset = NO;$/;"	v
 to_read_out	src/manchicken_430.c	/^int to_read_out = 0;$/;"	v

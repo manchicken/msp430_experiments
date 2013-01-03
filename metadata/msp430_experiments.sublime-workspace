@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"re",
+				"readout_reset"
+			],
+			[
+				"_man",
+				"_manckn430_lock_readout"
+			],
+			[
+				"_m",
+				"_manckn430_lock_readout"
+			],
+			[
+				"is",
+				"is_on"
+			],
+			[
+				"man",
+				"manckn430_toggle_led"
+			],
+			[
+				"set",
+				"set_display"
+			],
+			[
+				"to",
+				"to_read_out"
+			],
+			[
 				"TA1",
 				"TA1CCTL1"
 			],
@@ -30,10 +58,6 @@
 			[
 				"url",
 				"url_error"
-			],
-			[
-				"is",
-				"is_error"
 			],
 			[
 				"proto",
@@ -416,10 +440,60 @@
 	"buffers":
 	[
 		{
+			"file": "/Users/manchicken/Documents/HardwareDev/msp430_experiments/src/readout_demo.c",
+			"settings":
+			{
+				"buffer_size": 748,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/manchicken/Documents/HardwareDev/msp430_experiments/include/manchicken_430.h",
+			"settings":
+			{
+				"buffer_size": 862,
+				"line_ending": "Unix",
+				"name": "#ifndef __MANCHICKEN_430_H__"
+			}
+		},
+		{
+			"file": "/Users/manchicken/Documents/HardwareDev/msp430_experiments/src/manchicken_430.c",
+			"settings":
+			{
+				"buffer_size": 2520,
+				"line_ending": "Unix",
+				"name": "#include <manchicken_430.h>"
+			}
+		},
+		{
 			"file": "/Users/manchicken/Documents/HardwareDev/msp430_experiments/src/light_patterns.c",
 			"settings":
 			{
-				"buffer_size": 833,
+				"buffer_size": 849,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/manchicken/Documents/HardwareDev/msp430_experiments/Makefile",
+			"settings":
+			{
+				"buffer_size": 783,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/manchicken/Documents/HardwareDev/msp430_experiments/src/temp_readout_demo.c",
+			"settings":
+			{
+				"buffer_size": 428,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/manchicken/Documents/HardwareDev/msp430_experiments/src/toggle_leds_with_button.c",
+			"settings":
+			{
+				"buffer_size": 485,
 				"line_ending": "Unix"
 			}
 		}
@@ -427,7 +501,7 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 67.0,
+		"height": 87.0,
 		"selected_items":
 		[
 			[
@@ -536,6 +610,8 @@
 	},
 	"file_history":
 	[
+		"/Users/manchicken/Documents/HardwareDev/msp430_experiments/src/bitmath.c",
+		"/Users/manchicken/Documents/HardwareDev/msp430_experiments/src/light_patterns.c",
 		"/Users/manchicken/Documents/Devel/manchicken.dev.urpartments.com/README.md",
 		"/Users/manchicken/Documents/Devel/manchicken.dev.urpartments.com/public_html/README.md",
 		"/Users/manchicken/Documents/HardwareDev/msp430_experiments/README.md",
@@ -543,8 +619,6 @@
 		"/Users/manchicken/Documents/HardwareDev/msp430_experiments/Makefile",
 		"/Users/manchicken/Documents/HardwareDev/MSP430G2xx3 Code Examples/C/msp430g2xx3_ta_01.c",
 		"/Users/manchicken/Documents/HardwareDev/msp430_experiments/src/toggle_leds_with_button.c",
-		"/Users/manchicken/Documents/HardwareDev/msp430_experiments/src/bitmath.c",
-		"/Users/manchicken/Documents/HardwareDev/msp430_experiments/src/light_patterns.c",
 		"/Users/manchicken/Documents/HardwareDev/demo-breathing-led-gcc-4.5.3/breathing-led.c",
 		"/Users/manchicken/Documents/HardwareDev/src/bitmath.c",
 		"/Users/manchicken/Documents/HardwareDev/Makefile",
@@ -681,6 +755,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"set_display",
+			"to_read",
+			"P2",
+			"to_read_out",
+			"__readout_interrupt_handler_executing",
+			"to_read_out",
+			"!",
 			"P2",
 			"url_error",
 			"WDTCTL",
@@ -763,6 +844,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"__lock_readout_interrupt_handler",
 			"nsserror",
 			"url_error",
 			"_http_print_stream_unbuffered"
@@ -776,23 +858,182 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/Users/manchicken/Documents/HardwareDev/msp430_experiments/src/light_patterns.c",
+					"file": "/Users/manchicken/Documents/HardwareDev/msp430_experiments/src/readout_demo.c",
 					"settings":
 					{
-						"buffer_size": 833,
+						"buffer_size": 748,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								308,
-								308
+								352,
+								352
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/manchicken/Documents/HardwareDev/msp430_experiments/include/manchicken_430.h",
+					"settings":
+					{
+						"buffer_size": 862,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								605,
+								605
+							]
+						],
+						"settings":
+						{
+							"auto_name": "#ifndef __MANCHICKEN_430_H__",
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/manchicken/Documents/HardwareDev/msp430_experiments/src/manchicken_430.c",
+					"settings":
+					{
+						"buffer_size": 2520,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								559,
+								559
+							]
+						],
+						"settings":
+						{
+							"auto_name": "#include <manchicken_430.h>",
+							"syntax": "Packages/C++/C.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/manchicken/Documents/HardwareDev/msp430_experiments/src/light_patterns.c",
+					"settings":
+					{
+						"buffer_size": 849,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								662,
+								662
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/manchicken/Documents/HardwareDev/msp430_experiments/Makefile",
+					"settings":
+					{
+						"buffer_size": 783,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								219,
+								219
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Makefile/Makefile.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/manchicken/Documents/HardwareDev/msp430_experiments/src/temp_readout_demo.c",
+					"settings":
+					{
+						"buffer_size": 428,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								194,
+								194
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/Users/manchicken/Documents/HardwareDev/msp430_experiments/src/toggle_leds_with_button.c",
+					"settings":
+					{
+						"buffer_size": 485,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								372,
+								372
 							]
 						],
 						"settings":
