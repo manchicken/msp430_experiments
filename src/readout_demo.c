@@ -3,15 +3,14 @@
 #include <manchicken_430.h>
 
 int main(void) {
-	WDTCTL = WDTPW + WDTHOLD; 			// Stop watchdog timer
-	P1DIR |= (REDLED | GREENLED | (!BUTTON));		// Set P1.0 and P1.6 to output direction
+	WDTCTL = WDTPW + WDTHOLD;
+	P1DIR |= (REDLED | GREENLED | (!BUTTON)); // LEDs out, BUTTON in
 
 	manckn430_set_crystal_timer0_a0();
 	manckn430_set_display(3);
 	manckn430_enable_button_interrupt();
 
-	_BIS_SR(LPM3_bits + GIE);       // LPM0 (low power mode) with interrupts enabled
-	// _BIS_SR(LPM0_bits + GIE);       // LPM0 (low power mode) with interrupts enabled
+	_BIS_SR(LPM0_bits + GIE);       // LPM0 (low power mode) with interrupts enabled
 
 	return 0;
 }
